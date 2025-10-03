@@ -3,7 +3,7 @@ import express, { urlencoded } from 'express';
 import cors from 'cors';
 import { connectDB } from './src/config/db.js';
 // import doctorRoutes from './src/routes/doctorRoutes.js';
-// import patientRoutes from './src/routes/patientRoutes.js';
+import patientRoutes from './src/routes/patientRoutes.js';
 // import chatbotRoutes from "./src/routes/chatbot.js";
 // import recordRoutes from "./src/routes/recordRoutes.js";
 // import accessRoutes from "./src/routes/accessRoutes.js";
@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
   res.send('Medichain API is running...');
 });
 // app.use('/api/doctors', doctorRoutes);
-// app.use('/api/patients', patientRoutes);
+app.use('/api/patients', patientRoutes);
 // app.use("/api", chatbotRoutes);
 // app.use("/api/records", recordRoutes);
 // app.use("/api/access", accessRoutes);
